@@ -11,21 +11,21 @@ type Value = ValuePiece | [ValuePiece, ValuePiece];
 const events = [
     {
         id: 1,
-        title: "Lorem ipsum dolor",
-        time: "12:00 PM - 2:00 PM",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        title: "Annual Tech Conference",
+        time: "10:00 AM - 4:00 PM",
+        description: "Join us for our Annual Tech Conference featuring industry leaders, keynote speakers, and networking opportunities. Learn about the latest trends and innovations in technology.",
     },
     {
         id: 2,
-        title: "Lorem ipsum dolor",
-        time: "12:00 PM - 2:00 PM",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        title: "Product Launch Webinar",
+        time: "2:00 PM - 3:00 PM",
+        description: "Be the first to witness the launch of our new product. This webinar will provide an in-depth look at the features and benefits, along with a Q&A session with our product team.",
     },
     {
         id: 3,
-        title: "Lorem ipsum dolor",
-        time: "12:00 PM - 2:00 PM",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        title: "Monthly Team Meeting",
+        time: "9:00 AM - 11:00 AM",
+        description: "Our monthly team meeting where we review progress, set goals for the upcoming month, and discuss any challenges or opportunities. Attendance is mandatory for all team members.",
     },
 ];
 
