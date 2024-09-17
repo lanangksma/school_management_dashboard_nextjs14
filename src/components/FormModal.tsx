@@ -30,7 +30,7 @@ const FormModal = ({
     return (
         <>
             <button className={`${size} flex items-center justify-center rounded-full ${bgColor}`}>
-                <Image src={`/${type}.svg`} alt={`${type}`} width={16} height={16}/>
+                <Image src={`/icons/${type}.svg`} alt={`${type}`} width={16} height={16}/>
             </button>
         </>
     );
