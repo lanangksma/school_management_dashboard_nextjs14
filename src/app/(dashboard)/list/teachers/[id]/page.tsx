@@ -3,6 +3,8 @@ import BigCalendar from "@/components/BigCalendar";
 import Announcements from "@/components/Announcements";
 import Link from "next/link";
 import Performance from "@/components/Performance";
+import {role} from "@/lib/data";
+import FormModal from "@/components/FormModal";
 
 const SingleTeacherPage = () => {
     return (
@@ -25,6 +27,24 @@ const SingleTeacherPage = () => {
                         <div className="w-2/3 flex flex-col justify-between gap-4">
                             <div className="flex items-center gap-4">
                                 <h1 className="text-xl font-semibold">LLeonardo Decaprio</h1>
+                                {role === "admin" && <FormModal
+                                    table="teacher"
+                                    type="update"
+                                    data={{
+                                        id: 1,
+                                        username: "deanguerrero",
+                                        email: "deanguerrero@gmail.com",
+                                        password: "password",
+                                        firstName: "Dean",
+                                        lastName: "Guerrero",
+                                        phone: "+1 234 567 89",
+                                        address: "1234 Main St, Anytown, USA",
+                                        bloodType: "A+",
+                                        dateOfBirth: "2000-01-01",
+                                        sex: "male",
+                                        img: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200",
+                                    }}
+                                />}
                             </div>
                             <p className="text-sm text-gray-500">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.7
