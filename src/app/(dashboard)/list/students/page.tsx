@@ -4,9 +4,10 @@ import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import Link from "next/link";
 import {role, studentsData} from "@/lib/data";
+import FormModal from "@/components/FormModal";
 
 type Student = {
-    id: string;
+    id: number;
     studentId: string;
     name: string;
     email?: string;
@@ -65,13 +66,14 @@ const StudentListPage = () => {
                 <div className="flex items-center gap-2">
                     <Link href={`/list/teachers/${item.id}`}>
                         <button className="w-7 h-7 flex items-center justify-center rounded-full bg-primSky">
-                            <Image src="/icons/view.png" alt="" width={16} height={16}/>
+                            <Image src="/icons/view.svg" alt="" width={16} height={16}/>
                         </button>
                     </Link>
                     {role === "admin" && (
-                        <button className="w-7 h-7 flex items-center justify-center rounded-full bg-primPurple">
-                            <Image src="/icons/delete.png" alt="" width={16} height={16}/>
-                        </button>
+                        // <button className="w-7 h-7 flex items-center justify-center rounded-full bg-primPurple">
+                        //     <Image src="/icons/delete.png" alt="" width={16} height={16}/>
+                        // </button>
+                        <FormModal table="student" type="delete" id={item.id}/>
                     )}
                 </div>
             </td>
@@ -93,9 +95,10 @@ const StudentListPage = () => {
                             <Image src={"/icons/sort.svg"} alt={"filter"} width={20} height={20}/>
                         </button>
                         {role === "admin" && (
-                            <button className="w-8 h-8 flex items-center justify-center rounded-full bg-primYellow">
-                                <Image src={"/icons/plus.svg"} alt={"filter"} width={20} height={20}/>
-                            </button>
+                            // <button className="w-8 h-8 flex items-center justify-center rounded-full bg-primYellow">
+                            //     <Image src={"/icons/plus.svg"} alt={"filter"} width={20} height={20}/>
+                            // </button>
+                            <FormModal table="student" type="create"/>
                         )}
                     </div>
                 </div>
