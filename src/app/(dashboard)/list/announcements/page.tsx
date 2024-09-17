@@ -18,9 +18,6 @@ const columns = [
         header: "Title", accessor: "title",
     },
     {
-        header: "Student", accessor: "student",
-    },
-    {
         header: "Class", accessor: "class",
     },
     {
@@ -50,8 +47,8 @@ const AnnouncemntListPage = () => {
                 <div className="flex items-center gap-2">
                     {role === "admin" && (
                         <>
-                            <FormModal table="subject" type="update" id={item.id}/>
-                            <FormModal table="subject" type="delete" data={item}/>
+                            <FormModal table="announcement" type="update" data={item}/>
+                            <FormModal table="announcement" type="delete" id={item.id}/>
                         </>
                     )}
                 </div>
@@ -74,7 +71,7 @@ const AnnouncemntListPage = () => {
                             <Image src={"/icons/sort.svg"} alt={"filter"} width={20} height={20}/>
                         </button>
                         {role === "admin" && (
-                            <FormModal table="result" type="create"/>
+                            <FormModal table="announcement" type="create"/>
                         )}
                     </div>
                 </div>
